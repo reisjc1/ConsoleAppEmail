@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BB_DB_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BB_Proposal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CRM_QUOTE_ID" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="StatusID" Type="int" />
+          <Property Name="ValueComission" Type="float" />
+          <Property Name="ValueTotal" Type="float" />
+          <Property Name="CreatedBy" Type="nvarchar(max)" />
+          <Property Name="ModifiedBy" Type="nvarchar(max)" />
+          <Property Name="CreatedTime" Type="datetime" />
+          <Property Name="ModifiedTime" Type="datetime" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Locked" Type="bit" />
+          <Property Name="ClientID" Type="int" />
+          <Property Name="ClientAccountNumber" Type="nvarchar(max)" />
+          <Property Name="StatusCRM" Type="int" />
+          <Property Name="AccountManager" Type="nvarchar(max)" />
+          <Property Name="ToDelete" Type="bit" />
+          <Property Name="CampaignID" Type="int" />
+          <Property Name="StatusCRM1" Type="nvarchar(max)" />
+          <Property Name="SobreValorizacao" Type="float" />
+          <Property Name="TaxaCopiaTotal" Type="float" />
+          <Property Name="SubTotal" Type="float" />
+        </EntityType>
+        <EntityContainer Name="BB_DB_DEVModelStoreContainer">
+          <EntitySet Name="BB_Proposal" EntityType="Self.BB_Proposal" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BB_DB_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BB_Proposal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CRM_QUOTE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StatusID" Type="Int32" />
+          <Property Name="ValueComission" Type="Double" />
+          <Property Name="ValueTotal" Type="Double" />
+          <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedTime" Type="DateTime" Precision="3" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Locked" Type="Boolean" />
+          <Property Name="ClientID" Type="Int32" />
+          <Property Name="ClientAccountNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StatusCRM" Type="Int32" />
+          <Property Name="AccountManager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ToDelete" Type="Boolean" />
+          <Property Name="CampaignID" Type="Int32" />
+          <Property Name="StatusCRM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SobreValorizacao" Type="Double" />
+          <Property Name="TaxaCopiaTotal" Type="Double" />
+          <Property Name="SubTotal" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="BB_DB_DEVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BB_Proposal" EntityType="Self.BB_Proposal" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BB_DB_DEVModelStoreContainer" CdmEntityContainer="BB_DB_DEVEntities">
+          <EntitySetMapping Name="BB_Proposal">
+            <EntityTypeMapping TypeName="BB_DB_DEVModel.BB_Proposal">
+              <MappingFragment StoreEntitySet="BB_Proposal">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CRM_QUOTE_ID" ColumnName="CRM_QUOTE_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="ValueComission" ColumnName="ValueComission" />
+                <ScalarProperty Name="ValueTotal" ColumnName="ValueTotal" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ClientAccountNumber" ColumnName="ClientAccountNumber" />
+                <ScalarProperty Name="StatusCRM" ColumnName="StatusCRM" />
+                <ScalarProperty Name="AccountManager" ColumnName="AccountManager" />
+                <ScalarProperty Name="ToDelete" ColumnName="ToDelete" />
+                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+                <ScalarProperty Name="StatusCRM1" ColumnName="StatusCRM1" />
+                <ScalarProperty Name="SobreValorizacao" ColumnName="SobreValorizacao" />
+                <ScalarProperty Name="TaxaCopiaTotal" ColumnName="TaxaCopiaTotal" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
